@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <link rel="stylesheet" href="/style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Lista de Tareas</h1>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Añadir una tarea">
-            <button type="submit">Agregar</button>
-        </form>
-        <ul id="task-list"></ul>
+  <div class="container">
+    <h1 class="mt-4 mb-4">Lista de Tareas</h1>
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input type="text" id="task-input" class="form-control" placeholder="Nueva tarea">
+      </div>
+      <div class="col-md-6">
+        <button id="add-task-btn" class="btn btn-primary btn-block">Agregar tarea</button>
+      </div>
     </div>
 
-    <script src="/js/script.js"></script>
+    <ul id="task-list" class="list-group">
+    </ul>
+  </div>
+
+  <script src="/js/script.js"></script>
 </body>
 </html>
