@@ -1,72 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('background.jpg');
-  background-size: cover;
 }
 
-h1 {
-  text-align: center;
-  color: #ffffff;
-  padding: 20px;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#task-form {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#task-input {
-  padding: 10px;
-  font-size: 16px;
-}
-
-#add-task-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-}
-
-#add-task-btn:hover {
-  background-color: #45a049;
-}
-
-#task-list {
-  list-style-type: none;
+.tasks {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  max-width: 500px;
-  margin: auto;
 }
 
-.task-item {
-  background-color: #ffffff;
+.task {
+  margin: 10px 0;
   padding: 10px;
-  margin-bottom: 10px;
   border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.task-item span {
-  flex-grow: 1;
-}
-
-.task-item button {
-  background-color: #f44336;
-  color: #ffffff;
+.task input {
+  margin: 0 10px;
   border: none;
-  border-radius: 3px;
-  padding: 5px 10px;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #333;
+}
+
+.task label {
+  display: block;
+  font-size: 14px;
+  color: #999;
+}
+
+.add-task {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.task-item button:hover {
-  background-color: #e53935;
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }

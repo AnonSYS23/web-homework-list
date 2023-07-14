@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Tareas</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <title>Modern Task List</title>
   <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="mt-4 mb-4">Lista de Tareas</h1>
-
-    <div class="row mb-4">
-      <div class="col-md-6">
-        <input type="text" id="task-input" class="form-control" placeholder="Nueva tarea">
-      </div>
-      <div class="col-md-6">
-        <button id="add-task-btn" class="btn btn-primary btn-block">Agregar tarea</button>
-      </div>
-    </div>
-
-    <ul id="task-list" class="list-group">
+    <ul class="tasks">
+      <li class="task">
+        <input type="text" placeholder="Task 1">
+      </li>
+      <li class="task">
+        <input type="text" placeholder="Task 2">
+      </li>
+      <li class="task">
+        <input type="text" placeholder="Task 3">
+      </li>
     </ul>
+    <button class="add-task">Add Task</button>
   </div>
 
-  <script src="/js/script.js"></script>
+  <script>
+    function addTask() {
+      const taskInput = document.querySelector("input[placeholder='Task 1']");
+      const task = taskInput.value;
+
+      if (task) {
+        const taskElement = document.createElement("li");
+        taskElement.classList.add("task");
+        taskElement.innerHTML = `
+          <input type="text" value="${task}" />
+        `;
+
+        document.querySelector(".tasks").appendChild(taskElement);
+      }
+
+      taskInput.value = "";
+    }
+
+    document.querySelector(".add-task").addEventListener("click", addTask);
+  </script>
 </body>
 </html>
