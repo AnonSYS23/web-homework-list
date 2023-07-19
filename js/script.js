@@ -14,3 +14,10 @@ $(function() {
     });
   });
   
+  $('.btn-danger').on('click', function() {
+    // Get the task item that was clicked.
+    var taskItem = $(this).closest('.list-group-item');
+    // Remove the task item from the list.
+    taskItem.remove();
+  });
+  
